@@ -6,10 +6,10 @@ class Utilities {
   getInfo() {
     return {
       id: 'utilities',
-      name: 'Mijal',
+      name: 'Utlities',
 
       colour: '#8BC34A',
-      colourSecondary: '#7CB343',
+      colourSecondary: '#7CB342',
       colourTertiary: '#689F38',
 
       menuIconURI: icon,
@@ -24,11 +24,11 @@ class Utilities {
           arguments: {
             A: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'tomato'
+              defaultValue: 'apple'
             },
             B: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'TOMATO'
+              defaultValue: 'APPLE'
             }
           }
         },
