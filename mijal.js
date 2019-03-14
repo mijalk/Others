@@ -5,8 +5,8 @@ class Utilities {
 
   getInfo() {
     return {
-      id: 'utilities',
-      name: 'Utlities',
+      id: 'mijal',
+      name: 'MijalExtension',
 
       colour: '#8BC34A',
       colourSecondary: '#7CB342',
