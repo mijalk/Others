@@ -1,5 +1,4 @@
 // scratch-vm/src/extensions/scratch3_[YOUR_EXTENSION_NAME_HERE]/index.js
-// nisui
 const BlockType = require('../../extension-support/block-type');
 const ArgumentType = require('../../extension-support/argument-type');
 
@@ -14,26 +13,26 @@ const blockIconURI = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53
  * Class for the makey makey blocks in Scratch 3.0
  * @constructor
  */
-class Scratch3MakeyMakeyBlocks {
+class Scratch3ExperimentBlocks {
   constructor (runtime) {
     this.runtime = runtime;
 }
 getInfo () {
     return {
-        id: 'makeymakey', // Replace with the ID you specified in scratch-gui
-        name: 'Makey Makey',
+        id: 'experiment', // Replace with the ID you specified in scratch-gui
+        name: 'The Experiment',
         blockIconURI: blockIconURI,
         blocks: [
             {
-                opcode: 'exponent',
-                text: '[BASE] ^ [POWER]',
+                opcode: 'multi',
+                text: '[A] * [B]',
                 blockType: BlockType.REPORTER,
                 arguments: {
-                    BASE: {
+                    A: {
                         type: ArgumentType.NUMBER,
                         defaultValue: 2
                     },
-                    POWER: {
+                    B: {
                         type: ArgumentType.NUMBER,
                         defaultValue: 3
                     }
@@ -43,11 +42,11 @@ getInfo () {
     };
 }
 
-exponent (args, util) {
-    const {BASE, POWER} = args;
-    return Math.pow(BASE, POWER);
+multi (args, util) {
+    const {A, B} = args;
+    return A*B;
 }
 
 }
  
-module.exports = Scratch3MakeyMakeyBlocks;
+module.exports = Scratch3ExperimentBlocks;
